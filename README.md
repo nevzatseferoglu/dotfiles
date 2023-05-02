@@ -1,8 +1,15 @@
 ## dotfiles
 
-planned improvements
+### Default.json
 
-- markdown preview
-- nvim-dap (debugger)
-- docker image
-- determine possible spurious errors when packages/neovim get updates
+Default profiile of my `Iterm2`
+
+### lvim
+
+Lunarvim configuration directory.
+
+![View](./view.png)
+
+### ToDo
+
+- Show custom keybindings in table view.

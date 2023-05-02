@@ -1,3 +1,4 @@
+
 # Colorful terminal
 export LESS_TERMCAP_mb=$'\e[1;32m'
 export LESS_TERMCAP_md=$'\e[1;32m'
@@ -7,8 +8,6 @@ export LESS_TERMCAP_so=$'\e[01;33m'
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m',
 # ----------------------------------------------
-
-
 
 # set golang environment
 export GOPATH=$HOME/go
@@ -100,6 +99,12 @@ plugins=(
 	zsh-autosuggestions
 	copyfile
 	vi-mode
+    fzf-tab # to turn it on and off: toggle-fzf-tab
+    kubectl
+    docker
+    fzf
+    ddosify
+    poetry
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -136,39 +141,35 @@ source /Users/nevzatseferoglu/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 export PATH=$PATH:/Users/nevzatseferoglu/.spicetify
 
 # setting up java environment
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-export JAVA_HOME=$(/usr/libexec/java_home)
-# ----------------------------------------------------------------
-
-# setting up pyenv to control different version of python
- export PYENV_ROOT="$HOME/.pyenv"
-# prompt changing future release issue
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
- command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
- eval "$(pyenv init -)"
- eval "$(pyenv virtualenv-init -)"
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home
+# export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+# export JAVA_HOME=$(/usr/libexec/java_home)
 # ----------------------------------------------------------------
 
 # setting up openssl and sqlite binaries
 export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
 export PATH="/opt/homebrew/opt/sqlite/bin:$PATH"
 
-# python virtual environment management
-# export PATH="/Users/nevzatseferoglu/.local/bin:$PATH"
+# fzf setup
+export FZF_DEFAULT_OPTS='--height 50% --layout=reverse --border'
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+fpath+=${ZDOTDIR:-~}/.zsh_functions
 
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/opt/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/opt/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/opt/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
+# Adding ansible to PATH
+export PATH="/Users/nevzatseferoglu/Library/Python/3.10/bin:$PATH"
+
+# lvim
+export PATH="/Users/nevzatseferoglu/.local/bin/:$PATH"
+
+
+
+
+
+
+
+
+
+
 
