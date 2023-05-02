@@ -2,7 +2,7 @@
 
 ### Default.json
 
-Default profiile of my `Iterm2`
+`Default` profile of my `Iterm2`.
 
 ### lvim
 
