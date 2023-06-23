@@ -13,6 +13,19 @@
 
 Lunarvim configuration directory.
 
+- Colorscheme settings
+
+```lua
+lvim.colorscheme = "zenbones"
+-- transparent_background is mutual exclusive with other settings
+-- More info: https://github.com/mcchrish/zenbones.nvim
+vim.g.zenbones = {
+  darkness = 'stark',
+  transparent_background = true,
+  colorize_diagnostic_underline_text = false
+}
+```
+
 ![View](./view.png)
 
 #### Settings;
